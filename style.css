@@ -1,1 +1,15 @@
+body {
+    background-color: rgb(255, 215, 196);
+}
 
+main {
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    height: 25rem;
+
+}
