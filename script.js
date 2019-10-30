@@ -131,6 +131,7 @@ function afterCatQuestion() {
     }
 }
 
+// vill att ett ogiltligt svar ska bli en egen alert.
 function loveCatQuestion() {
     const scaleOne = [ "1", "one"]
     const scaleTwo = ["2", "two"]
@@ -144,14 +145,16 @@ function loveCatQuestion() {
         const loveCatQuestion = prompt("You sit and stare at the cat, you love the cat, it's your best friend. you think: on a scale of 1-5, how much do I love the cat?");
         for (const action of scaleOne) {
             if (action === loveCatQuestion.toLowerCase()) {
-                alert ("1!");
+                alert ("Yeah, the cat is nr1 on your heart! You cant love the cat more!");
+                helpFromTheCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
         }
         for (const action of scaleTwo) {
             if (action === loveCatQuestion.toLowerCase()) {
-                alert("2!")
+                alert("Omg! You think of number 2 but you mean number 5!")
+                helpFromTheCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -159,7 +162,8 @@ function loveCatQuestion() {
 
         for (const action of scaleThree) {
             if (action === loveCatQuestion.toLowerCase()) {
-                alert("3!")
+                alert("You can only count to 3, you love the cat more than anything else in the world!")
+                helpFromTheCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -167,7 +171,8 @@ function loveCatQuestion() {
 
         for (const action of scaleFour) {
             if (action === loveCatQuestion.toLowerCase()) {
-                alert("4!")
+                alert("You think 4 because you want to be as cool as the cat. (But really it's a 5 <3!!!)")
+                helpFromTheCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -175,11 +180,17 @@ function loveCatQuestion() {
 
         for (const action of scaleFive) {
             if (action === loveCatQuestion.toLowerCase()) {
-                alert("5!")
+                alert("Dumb question, the answer is always 5! <3")
+                helpFromTheCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
         }
-
     }
+}
+
+function helpFromTheCat() {
+    alert ("Suddenly you hear the cat say: Inka! Follow me. I can fix this for you!")
+    alert("you follow the cat, you go to the human who sleeps. The cat attacks the human's feet and the human wakes up. Now you and the human go out and play!")
+    document.querySelector.img.src= "./";
 }
