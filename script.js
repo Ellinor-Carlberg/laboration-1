@@ -42,7 +42,8 @@ function secondQuestion() {
         }
         for (const action of allowedActionsTalkToCat) {
             if (action === secondQuestion.toLowerCase()) {
-                alert ("Cat: Hi Inka. You want to go outside? I will help you! Lets go to the sleeping human, I can wake the human for you.");
+                alert ("Cat: Hi Inka. You want to go outside? I dont want to go outside right now, it is cold. But maybe I can help you... Let me think and come back to me later, I may have come up with a plan then.");
+                afterCatQuestion()
                 isQuestionAnsweredCorrectlySecondQuestion = true;
                 break;
             }
@@ -104,3 +105,27 @@ function fourthQuestion() {
     }
 }
 
+function afterCatQuestion() {
+    const allowedActionsGoToHuman = [ "human", "to human", "go to human"]
+    const allowedActionsPlayWithToy = ["toy", "play", "play with toy", "funny toy", "play with a funny toy"]
+    const isQuestionAnsweredCorrectlyafterCatQuestion = false
+    
+    while (!isQuestionAnsweredCorrectlyafterCatQuestion) {
+        
+        const afterCatQuestion = prompt("Hmmmm.... What do you want to do now, go to the human in the kitchen or play with a funny toy?");
+        for (const action of allowedActionsGoToHuman) {
+            if (action === afterCatQuestion.toLowerCase()) {
+                alert ("You go to the human!");
+                isQuestionAnsweredCorrectlyafterCatQuestion = true;
+                break;
+            }
+        }
+        for (const action of allowedActionsPlayWithToy) {
+            if (action === afterCatQuestion.toLowerCase()) {
+                alert ("You play with the toy.");
+                isQuestionAnsweredCorrectlyafterCatQuestion = true;
+                break;
+            }
+        }
+    }
+}
