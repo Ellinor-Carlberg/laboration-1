@@ -64,7 +64,6 @@ function thirdQuestion() {
                 alert ("You did a trick and get a doggo candy!");
                 fourthQuestion()
                 isQuestionAnsweredCorrectlyThirdQuestion = true;
-                //vill att man ska kunna svara ja/nej, göra ett trick max 3 ggr, sen slut. 
                 break;
             }
         }
@@ -88,7 +87,7 @@ function fourthQuestion() {
     while (!isQuestionAnsweredCorrectlyFourthQuestion) {
         
         const fourthQuestion = prompt("Hmmmm.... What do you want to do now, do another trick or go to the cat?");
-        // vill att denna ska kunna göras flera gånger, efter 2 ggr, ska katten avbryta. 
+        // Denna är inte klar! vill att denna ska kunna göras flera gånger, efter 2 ggr, ska katten avbryta. 
         for (const action of allowedActionsDoAnotherTrick) {
             if (action === fourthQuestion.toLowerCase()) {
                 alert ("You did another trick and get one more doggo candy!");
@@ -192,5 +191,8 @@ function loveCatQuestion() {
 function helpFromTheCat() {
     alert ("Suddenly you hear the cat say: Inka! Follow me. I can fix this for you!")
     alert("you follow the cat, you go to the human who sleeps. The cat attacks the human's feet and the human wakes up. Now you and the human go out and play!")
-    document.querySelector.img.src= "./";
+    alert ("Thank you for playing my game! -Inka <3")
+//funkar inte
+    var image = document.getElementsByClassName("image");
+image.src = "./photo-1541781774459-bb2af2f05b55.jpeg"
 }
