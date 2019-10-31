@@ -89,7 +89,7 @@ function fourthQuestion() {
         for (const action of allowedActionsDoAnotherTrick) {
             if (action === fourthQuestion.toLowerCase()) {
                 alert ("You did another trick and get one more doggo candy!");
-                helpFromTheCat()
+                endTheGameIfTrick()
                 isQuestionAnsweredCorrectlyFourthQuestion = true;
                 break;
             }
@@ -188,19 +188,14 @@ function loveCatQuestion() {
 }
 
 function endTheGameIfTrick() {
-    alert ("Suddenly you hear the cat say: Inka! I got it, follow me...")
-    alert("You follow the cat to the human who sleeps. The cat attacks the human's feet and the human wakes up. Now you and the human go out and play!")
+    alert ("Oh no, you got stuck in the doggo candy loop :(. You didnt go out and play becuse you only thinking about candy now, but on the other hand you got a lot of doggy candies! :D")
     alert ("Thank you for playing my game! -Inka <3")
-//funkar inte
-    var image = document.getElementsByClassName("image");
-image.src = "./photo-1541781774459-bb2af2f05b55.jpeg"
+
 }
 
 function endTheGameIfCat() {
-    alert ("Suddenly you hear the cat say: Inka! I got it, follow me...")
-    alert("You follow the cat to the human who sleeps. The cat attacks the human's feet and the human wakes up. Now you and the human go out and play!")
+    alert ("Suddenly the cat opens its eyes and say: Inka! Follow me, lets go and wake the sleeping human up...")
+    alert("You follow the cat to the human who sleeps, the cat attacks the human's feet and the human wakes up. Now you and the human go out and play! It´s a win-win situation for you and the cat! :)")
     alert ("Thank you for playing my game! -Inka <3")
-//funkar inte
-    var image = document.getElementsByClassName("image");
-image.src = "./photo-1541781774459-bb2af2f05b55.jpeg"
+    //insert picture
 }
