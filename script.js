@@ -58,7 +58,7 @@ function thirdQuestion() {
     
     while (!isQuestionAnsweredCorrectlyThirdQuestion) {
         
-        const thirdQuestion = prompt("Hi Inka. Do you want to do a trick?");
+        const thirdQuestion = prompt("Human: Hi Inka. Do you want to do a trick?");
         for (const action of allowedActionsDoATrick) {
             if (action === thirdQuestion.toLowerCase()) {
                 alert ("You did a trick and get a doggo candy!");
@@ -78,7 +78,6 @@ function thirdQuestion() {
     }
 }
 
-
 function fourthQuestion() {
     const allowedActionsDoAnotherTrick = [ "trick", "do trick", "do a trick"]
     const allowedActionsTalkToCat = ["cat", "the cat", "to the cat" , "go to the cat"]
@@ -86,18 +85,19 @@ function fourthQuestion() {
     
     while (!isQuestionAnsweredCorrectlyFourthQuestion) {
         
-        const fourthQuestion = prompt("Hmmmm.... What do you want to do now, do another trick or go to the cat?");
-        // Denna är inte klar! vill att denna ska kunna göras flera gånger, efter 2 ggr, ska katten avbryta. 
+        const fourthQuestion = prompt("Hmmmm.... What do you want to do now, do a trick or go to the cat?");
         for (const action of allowedActionsDoAnotherTrick) {
             if (action === fourthQuestion.toLowerCase()) {
                 alert ("You did another trick and get one more doggo candy!");
+                helpFromTheCat()
                 isQuestionAnsweredCorrectlyFourthQuestion = true;
                 break;
             }
         }
         for (const action of allowedActionsTalkToCat) {
             if (action === fourthQuestion.toLowerCase()) {
-                alert ("You go to the cat.");
+                alert ("Cat: Hi Inka<3. You want to go outside? I dont, it is cold. But maybe I can come up with a plan, let me think.");
+                afterCatQuestion()
                 isQuestionAnsweredCorrectlyFourthQuestion = true;
                 break;
             }
@@ -115,7 +115,7 @@ function afterCatQuestion() {
         const afterCatQuestion = prompt("The cat lies down and closes its eyes. What do you want to do now, go to the human in the kitchen or wait and se if the cat comes up with a plan?");
         for (const action of allowedActionsGoToHuman) {
             if (action === afterCatQuestion.toLowerCase()) {
-                alert ("You go to the human!");
+                thirdQuestion()
                 isQuestionAnsweredCorrectlyafterCatQuestion = true;
                 break;
             }
@@ -130,7 +130,6 @@ function afterCatQuestion() {
     }
 }
 
-// vill att ett ogiltligt svar ska bli en egen alert.
 function loveCatQuestion() {
     const scaleOne = [ "1", "one"]
     const scaleTwo = ["2", "two"]
@@ -145,7 +144,7 @@ function loveCatQuestion() {
         for (const action of scaleOne) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert ("Yeah, the cat is nr1 on your heart! You cant love the cat more!");
-                helpFromTheCat()
+                endTheGameIfCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -153,7 +152,7 @@ function loveCatQuestion() {
         for (const action of scaleTwo) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert("Omg! You think of number 2 but you mean number 5!")
-                helpFromTheCat()
+                endTheGameIfCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -162,7 +161,7 @@ function loveCatQuestion() {
         for (const action of scaleThree) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert("You can only count to 3, you love the cat more than anything else in the world!")
-                helpFromTheCat()
+                endTheGameIfCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -171,7 +170,7 @@ function loveCatQuestion() {
         for (const action of scaleFour) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert("You think 4 because you want to be as cool as the cat. (But really it's a 5 <3!!!)")
-                helpFromTheCat()
+                endTheGameIfCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -180,7 +179,7 @@ function loveCatQuestion() {
         for (const action of scaleFive) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert("Dumb question, the answer is always 5! <3")
-                helpFromTheCat()
+                endTheGameIfCat()
                 isQuestionAnsweredCorrectlyLoveCatQuestion = true;
                 break;
             }
@@ -188,9 +187,18 @@ function loveCatQuestion() {
     }
 }
 
-function helpFromTheCat() {
-    alert ("Suddenly you hear the cat say: Inka! Follow me. I can fix this for you!")
-    alert("you follow the cat, you go to the human who sleeps. The cat attacks the human's feet and the human wakes up. Now you and the human go out and play!")
+function endTheGameIfTrick() {
+    alert ("Suddenly you hear the cat say: Inka! I got it, follow me...")
+    alert("You follow the cat to the human who sleeps. The cat attacks the human's feet and the human wakes up. Now you and the human go out and play!")
+    alert ("Thank you for playing my game! -Inka <3")
+//funkar inte
+    var image = document.getElementsByClassName("image");
+image.src = "./photo-1541781774459-bb2af2f05b55.jpeg"
+}
+
+function endTheGameIfCat() {
+    alert ("Suddenly you hear the cat say: Inka! I got it, follow me...")
+    alert("You follow the cat to the human who sleeps. The cat attacks the human's feet and the human wakes up. Now you and the human go out and play!")
     alert ("Thank you for playing my game! -Inka <3")
 //funkar inte
     var image = document.getElementsByClassName("image");
