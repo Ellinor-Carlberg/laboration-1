@@ -5,7 +5,7 @@ function startGame() {
     const isQuestionAnsweredCorrectlyFirstQuestion = false
     
     while (!isQuestionAnsweredCorrectlyFirstQuestion) {  
-        const firstQuestion = prompt("You are the cute dog Inka and you want to go out and play. You are now in the bedroom, one human is sleeping and the other human is in the kitchen. Do you try to wake up the human that is sleeping, or do you go to the kitchen?");
+        const firstQuestion = prompt("You are the cute doggo Inka and you want to go out and play. You are now in the bedroom, one human is sleeping and the other human is in the kitchen. Do you try to wake up the human that is sleeping, or do you go to the kitchen?");
         for (const action of allowedActionsTalkToSleepingHuman) {
             if (action === firstQuestion.toLowerCase()) {
                 alert ("Human: zzZZZzzzzz zzzZZZzzzz. You try to wake up the human with a boop, it doesnt work. You go out in the kitchen...");
@@ -32,7 +32,7 @@ function secondQuestion() {
     
     while (!isQuestionAnsweredCorrectlySecondQuestion) {
         
-        const secondQuestion = prompt("Now you are in the kitchen, there is a human eating food and a cat. Do you want to go to the human, or do you want to go to the cat?");
+        const secondQuestion = prompt("Now you are in the kitchen, there is a human eating food and there is a cat. Do you want to go to the human, or do you want to go to the cat?");
         for (const action of allowedActionsTalkToEatingHuman) {
             if (action === secondQuestion.toLowerCase()) {
                 thirdQuestion()
@@ -42,7 +42,7 @@ function secondQuestion() {
         }
         for (const action of allowedActionsTalkToCat) {
             if (action === secondQuestion.toLowerCase()) {
-                alert ("Cat: Hi Inka<3. You want to go outside? I dont, it is cold. But maybe I can come up with a plan, let me think.");
+                alert ("Cat: Hi doggo Inka<3. You want to go outside? I dont, it is cold. But maybe I can come up with a plan, let me think.");
                 afterCatQuestion()
                 isQuestionAnsweredCorrectlySecondQuestion = true;
                 break;
@@ -58,7 +58,7 @@ function thirdQuestion() {
     
     while (!isQuestionAnsweredCorrectlyThirdQuestion) {
         
-        const thirdQuestion = prompt("Human: Hi Inka. Do you want to do a trick?");
+        const thirdQuestion = prompt("Human: Hi doggo Inka. Do you want to do a trick?");
         for (const action of allowedActionsDoATrick) {
             if (action === thirdQuestion.toLowerCase()) {
                 alert ("You did a trick and get a doggo candy!");
@@ -189,13 +189,16 @@ function loveCatQuestion() {
 
 function endTheGameIfTrick() {
     alert ("Oh no, you got stuck in the doggo candy loop :(. You didnt go out and play becuse you only thinking about candy now, but on the other hand you got a lot of doggy candies! :D")
-    alert ("Thank you for playing my game! -Inka <3")
+    alert ("Thank you hooman for playing my game! - *mlem* Inka <3")
 
 }
 
 function endTheGameIfCat() {
     alert ("Suddenly the cat opens its eyes and say: Inka! Follow me, lets go and wake the sleeping human up...")
     alert("You follow the cat to the human who sleeps, the cat attacks the human's feet and the human wakes up. Now you and the human go out and play! It´s a win-win situation for you and the cat! :)")
-    alert ("Thank you for playing my game! -Inka <3")
+    alert ("Thank you hooman for playing my game! - *mlem* Inka <3")
     //insert picture
 }
+
+
+
