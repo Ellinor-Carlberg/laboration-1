@@ -85,7 +85,7 @@ function fourthQuestion() {
     
     while (!isQuestionAnsweredCorrectlyFourthQuestion) {
         
-        const fourthQuestion = prompt("Hmmmm.... What do you want to do now, do a trick or go to the cat?");
+        const fourthQuestion = prompt("Hmmmm.... What do you want to do now, do another trick or go to the cat?");
         for (const action of allowedActionsDoAnotherTrick) {
             if (action === fourthQuestion.toLowerCase()) {
                 alert ("You did another trick and get one more doggo candy!");
