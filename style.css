@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 215, 196);
+    background-color: rgb(255, 255, 255);
 }
 
 main {
@@ -10,6 +10,18 @@ main {
     align-items: center;
 }
 img {
-    height: 25rem;
+    height: 30rem;
 
+}
+
+button {
+ padding: 0.5rem;
+ background: rgb(60, 43, 2);
+font-size: 1.2rem;
+  border: none;
+  color: rgb(235, 235, 235);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; 
+  border-radius: 8rem;
 }
