@@ -1,7 +1,7 @@
 
 function startGame() {
-    const allowedActionsTalkToSleepingHuman = ["wake", "human", "wake human", "wake the human", "wake human up", "wake the human up"]
-    const allowedActionsGoToKitchen = ["kitchen", "the kitchen", "to the kitchen" , "go to the kitchen"]
+    const allowedActionsTalkToSleepingHuman = ["wake", "human", "wake human", "wake the human", "wake human up", "wake the human up", "i want to wake the human up"]
+    const allowedActionsGoToKitchen = ["kitchen", "the kitchen", "to the kitchen" , "go to the kitchen", "I want to go to the kitchen"]
     const isQuestionAnsweredCorrectlyFirstQuestion = false
     
     while (!isQuestionAnsweredCorrectlyFirstQuestion) {  
@@ -24,10 +24,9 @@ function startGame() {
         }
     }
 }
-
 function secondQuestion() {
-    const allowedActionsTalkToEatingHuman = [ "human", "the human", "to the human", "go to the human"]
-    const allowedActionsTalkToCat = ["cat", "the cat", "to the cat" , "go to the cat"]
+    const allowedActionsTalkToEatingHuman = [ "human", "the human", "to the human", "go to the human", "i want to go to the human"]
+    const allowedActionsTalkToCat = ["cat", "the cat", "to the cat" , "go to the cat", "i want to go to the cat"]
     const isQuestionAnsweredCorrectlySecondQuestion = false
     
     while (!isQuestionAnsweredCorrectlySecondQuestion) {
@@ -50,10 +49,9 @@ function secondQuestion() {
         }
     }
 }
-
 function thirdQuestion() {
-    const allowedActionsDoATrick = [ "yes", "yes i do", "i do", "trick"]
-    const allowedActionsNotDoATrick = ["no", "no i dont", "no i dont want" , "no trick"]
+    const allowedActionsDoATrick = [ "yes", "yes i do", "i do", "trick", "i want to do a trick"]
+    const allowedActionsNotDoATrick = ["no", "no i dont", "no i dont want" , "no trick", "i do not want to do a trick", "i dont want to do a trick"]
     const isQuestionAnsweredCorrectlyThirdQuestion = false
     
     while (!isQuestionAnsweredCorrectlyThirdQuestion) {
@@ -77,18 +75,17 @@ function thirdQuestion() {
         }
     }
 }
-
 function fourthQuestion() {
-    const allowedActionsDoAnotherTrick = [ "trick", "do trick", "do a trick"]
-    const allowedActionsTalkToCat = ["cat", "the cat", "to the cat" , "go to the cat"]
+    const allowedActionsDoAnotherTrick = [ "trick", "do trick", "do a trick", "i want to do a trick"]
+    const allowedActionsTalkToCat = ["cat", "the cat", "to the cat" , "go to the cat", "i want to go to the cat"]
     const isQuestionAnsweredCorrectlyFourthQuestion = false
     
     while (!isQuestionAnsweredCorrectlyFourthQuestion) {
         
-        const fourthQuestion = prompt("Hmmmm.... What do you want to do now, do another trick or go to the cat?");
+        const fourthQuestion = prompt("The human will give you a doggo candy if you do a trick, but really you want to go outside. Hmmmm.... do you want to do a trick or go to the cat?");
         for (const action of allowedActionsDoAnotherTrick) {
             if (action === fourthQuestion.toLowerCase()) {
-                alert ("You did another trick and get one more doggo candy!");
+                alert ("You did a trick and get a doggo candy!");
                 endTheGameIfTrick()
                 isQuestionAnsweredCorrectlyFourthQuestion = true;
                 break;
@@ -104,15 +101,14 @@ function fourthQuestion() {
         }
     }
 }
-
 function afterCatQuestion() {
-    const allowedActionsGoToHuman = [ "human", "to human", "go to human"]
-    const allowedActionsPlayWithToy = ["wait", "wait and se", "cat"]
+    const allowedActionsGoToHuman = [ "human", "to human", "go to human", "human that is eating","go to the human", "i want to go to the human"]
+    const allowedActionsPlayWithToy = ["wait", "wait and se", "cat", "i want to wait", "i wait", "wait and see if the cat comes up with a plan"]
     const isQuestionAnsweredCorrectlyafterCatQuestion = false
     
     while (!isQuestionAnsweredCorrectlyafterCatQuestion) {
         
-        const afterCatQuestion = prompt("The cat lies down and closes its eyes. What do you want to do now, go to the human in the kitchen or wait and se if the cat comes up with a plan?");
+        const afterCatQuestion = prompt("The cat lies down and closes its eyes. What do you want to do now, go to the human that is eating or wait and see if the cat comes up with a plan?");
         for (const action of allowedActionsGoToHuman) {
             if (action === afterCatQuestion.toLowerCase()) {
                 thirdQuestion()
@@ -129,7 +125,6 @@ function afterCatQuestion() {
         }
     }
 }
-
 function loveCatQuestion() {
     const scaleOne = [ "1", "one"]
     const scaleTwo = ["2", "two"]
@@ -157,7 +152,6 @@ function loveCatQuestion() {
                 break;
             }
         }
-
         for (const action of scaleThree) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert("You can only count to 3, you love the cat more than anything else in the world!")
@@ -166,7 +160,6 @@ function loveCatQuestion() {
                 break;
             }
         }
-
         for (const action of scaleFour) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert("You think 4 because you want to be as cool as the cat. (But really it's a 5 <3!!!)")
@@ -175,7 +168,6 @@ function loveCatQuestion() {
                 break;
             }
         }
-
         for (const action of scaleFive) {
             if (action === loveCatQuestion.toLowerCase()) {
                 alert("Dumb question, the answer is always 5! <3")
@@ -186,18 +178,15 @@ function loveCatQuestion() {
         }
     }
 }
-
 function endTheGameIfTrick() {
     alert ("Oh no, you got stuck in the doggo candy loop :(. You didnt go out and play becuse you only thinking about candy now, but on the other hand you got a lot of doggy candies! :D")
     alert ("Thank you hooman for playing my game! - *mlem* Inka <3")
 
 }
-
 function endTheGameIfCat() {
     alert ("Suddenly the cat opens its eyes and say: Inka! Follow me, lets go and wake the sleeping human up...")
-    alert("You follow the cat to the human who sleeps, the cat attacks the human's feet and the human wakes up. Now you and the human go out and play! It´s a win-win situation for you and the cat! :)")
+    alert("You follow the cat to the human who sleeps, the cat attacks the human's feet and the human wakes up. Now you and the human go out and play! It´s a win-win situation for you and the cat! :3")
     alert ("Thank you hooman for playing my game! - *mlem* Inka <3")
-    //insert picture
 }
 
 
