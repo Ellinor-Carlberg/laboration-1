@@ -9,6 +9,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 img {
     height: 30rem;
 
@@ -21,7 +22,5 @@ font-size: 1.2rem;
   border: none;
   color: rgb(235, 235, 235);
   text-align: center;
-  text-decoration: none;
-  display: inline-block; 
   border-radius: 8rem;
 }
