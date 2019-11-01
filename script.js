@@ -1,4 +1,6 @@
 
+
+///testar github 
 function startGame() {
     const allowedActionsTalkToSleepingHuman = ["wake", "human", "wake human", "wake the human", "wake human up", "wake the human up", "i want to wake the human up"]
     const allowedActionsGoToKitchen = ["kitchen", "the kitchen", "to the kitchen" , "go to the kitchen", "I want to go to the kitchen"]
