@@ -9,5 +9,8 @@ The game is about getting someone to go out and play with you.
 
 
 Link to Github repot:
+https://github.com/Ellinor-Carlberg/laboration-1
 
 Demo link (from Github pages):
+https://ellinor-carlberg.github.io/laboration-1/
+

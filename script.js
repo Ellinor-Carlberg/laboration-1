@@ -1,7 +1,6 @@
- /**
-  * 
-  * 
-  *  */  
+/**
+  * To start the game, initiate a prompt.
+  */
 function startGame() {
     const allowedActionsTalkToSleepingHuman = ["wake", "human", "wake human", "wake the human", "wake human up", "wake the human up", "i want to wake the human up"]
     const allowedActionsGoToKitchen = ["kitchen", "the kitchen", "to the kitchen" , "go to the kitchen", "I want to go to the kitchen"]
@@ -28,6 +27,9 @@ function startGame() {
     }
 }
 
+/**
+  * Initiate a prompt.
+  */
 function secondQuestion() {
     const allowedActionsTalkToEatingHuman = [ "human", "the human", "to the human", "go to the human", "i want to go to the human"]
     const allowedActionsTalkToCat = ["cat", "the cat", "to the cat" , "go to the cat", "i want to go to the cat"]
@@ -54,6 +56,9 @@ function secondQuestion() {
     }
 }
 
+/**
+  * Initiate a prompt.
+  */
 function firstChooseHumanQuestion() {
     const allowedActionsDoATrick = [ "yes", "yes i do", "i do", "trick", "i want to do a trick"]
     const allowedActionsNotDoATrick = ["no", "no i dont", "no i dont want" , "no trick", "i do not want to do a trick", "i dont want to do a trick"]
@@ -81,6 +86,9 @@ function firstChooseHumanQuestion() {
     }
 }
 
+/**
+  * Initiate a prompt.
+  */
 function lastTrickQuestion() {
     const allowedActionsDoAnotherTrick = [ "trick", "do trick", "do a trick", "i want to do a trick"]
     const allowedActionsTalkToCat = ["cat", "the cat", "to the cat" , "go to the cat", "i want to go to the cat"]
@@ -108,6 +116,9 @@ function lastTrickQuestion() {
     }
 }
 
+/**
+  * Initiate a prompt.
+  */
 function waitOrHumanQuestion() {
     const allowedActionsGoToHuman = [ "human", "to human", "go to human", "human that is eating","go to the human", "i want to go to the human"]
     const allowedActionsPlayWithToy = ["wait", "wait and se", "cat", "i want to wait", "i wait", "wait and see if the cat comes up with a plan"]
@@ -133,6 +144,9 @@ function waitOrHumanQuestion() {
     }
 }
 
+/**
+  * Initiate a prompt.
+  */
 function loveCatQuestion() {
     const scaleOne = [ "1", "one"]
     const scaleTwo = ["2", "two"]
@@ -187,12 +201,17 @@ function loveCatQuestion() {
     }
 }
 
+/**
+  * Initiate 2 alerts.
+  */
 function endTheGameIfTrick() {
     alert ("Oh no, you got stuck in the doggo candy loop :(. You didnt go out and play becuse you only thinking about candy now, but on the other hand you got a lot of doggy candies! :D")
     alert ("Thank you hooman for playing my game! - *mlem* Inka <3")
-
 }
 
+/**
+  * Initiate 3 alerts.
+  */
 function endTheGameIfCat() {
     alert ("Suddenly the cat opens its eyes and say: Inka! Follow me, lets go and wake the sleeping human up...")
     alert("You follow the cat to the human who sleeps, the cat attacks the human's feet and the human wakes up. Now you and the human go out and play! It´s a win-win situation for you and the cat! :3")
